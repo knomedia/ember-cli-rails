@@ -1,7 +1,10 @@
 # ember-cli-rails
 
-rails template and build script for working with [https://github.com/stefanpenner/ember-cli](ember-cli)
-and deploying with a rails api / backend.
+A rails template and build script for working with [ember-cli](https://github.com/stefanpenner/ember-cli)
+and deploying with a rails api / backend. The goal is to allow ember-cli to be 
+in charge of building and testing your ember app, and rails to be in charge of 
+building and testing your rails app.
+
 
 ## Dependencies
 
@@ -28,7 +31,8 @@ clone the repo
 $ git clone git@github.com:knomedia/ember-cli-rails.git
 ```
 
-create a new rails app assuming you are in the same directory as the `ember-cli-rails` repo
+Assuming you are in the same directory as the `ember-cli-rails` repo, create a
+new rails app like:
 
 ```bash
 $ rails new app -m ember-cli-rails/template.rb
@@ -38,7 +42,10 @@ If you are in another location, change the path to the template file as needed.
 
 You now have a rails project with an ember-cli project within it.
 
-** You'll need to update your ember app config to set `location: 'hash'` manually **
+The template will set a catch-all rails route that serves up the ember app.
+**You'll need to update your ember app config to set `location: 'hash'` manually
+for this to work.** As you add api endpoints to rails be sure to place them
+before the catch all route.
 
 ## Daily development
 
@@ -56,8 +63,8 @@ development ember server
 $ ember serve --proxy http://localhost:3000
 ```
 
-This will proxy api calls to you rails backend. For more information see the 
-[http://iamstef.net/ember-cli/](ember-cli docs).
+This will proxy api calls to your rails backend. For more information see the 
+[ember-cli docs)](http://iamstef.net/ember-cli/)
 
 
 ## Deployment
