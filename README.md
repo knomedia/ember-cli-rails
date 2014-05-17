@@ -64,7 +64,7 @@ $ ember serve --proxy http://localhost:3000
 ```
 
 This will proxy api calls to your rails backend. For more information see the 
-[ember-cli docs)](http://iamstef.net/ember-cli/)
+[ember-cli docs](http://iamstef.net/ember-cli/)
 
 
 ## Deployment
