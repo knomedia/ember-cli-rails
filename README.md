@@ -35,10 +35,14 @@ Assuming you are in the same directory as the `ember-cli-rails` repo, create a
 new rails app like:
 
 ```bash
-$ rails new app -m ember-cli-rails/template.rb
+$ rails new app -m template.rb
 ```
 
 If you are in another location, change the path to the template file as needed.
+e.g.
+```bash
+$ rails new app -m ember-cli-rails/template.rb
+```
 
 You now have a rails project with an ember-cli project within it.
 
